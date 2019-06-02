@@ -1,4 +1,4 @@
-
+# coding=UTF-8
 """"
 #1:分析文本輸出關鍵字(找最出現頻率最高n個關鍵字並給予權重)
 #2:分析文本輸出關鍵句(比較每個句子中關鍵字出現頻率，輸出前n項出現最多關鍵字句子維結果)
@@ -11,6 +11,8 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import WordPunctTokenizer
 from sys import argv
+
+
 
 def tokenText(text):
     tokens = [t for t in text.split()]
@@ -57,7 +59,7 @@ def ranking(sentence, freq, n):
     max_list = heapq.nlargest(n,rank) #取出前n筆關鍵句子
 
     for i in range(0,len(max_list)):
-        print(sentence[rank.index(rank[i])])
+        print(i+1,". ",sentence[rank.index(rank[i])])
 
     #print(len(rank),rank)
 
