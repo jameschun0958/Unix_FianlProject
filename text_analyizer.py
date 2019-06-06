@@ -86,7 +86,7 @@ if __name__=="__main__":
 
     filename = argv[1]
 
-    if(len(argv) > 2):
+    if(len(argv) > 1):
         if(argv[2].isnumeric()):
             n = int(argv[2])
 

@@ -19,10 +19,10 @@ option_help() {
 }
 
 if [ $1 = "-f" ];then
-	echo "you type -f"
+	#echo "you type -f"
 	if [ $3 = "-k" ];then
 		echo "================== The key sentences in article of $2 =================="
-		python3 $dir/text_analyizer.py "$2"
+		python3 $dir/text_analyizer.py "$2" "$4"
 		echo
 	else
 		echo "================== The seraching result of $2 ================="	
